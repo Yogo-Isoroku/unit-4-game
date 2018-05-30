@@ -1,43 +1,98 @@
-//needs to randomly choose a target number between 19 ands 120
-var targetNumber = 53;
+$(document).ready(function () {
 
-$("#number-to-guess").text(targetNumber);
+    //needs to randomly choose a target number between x=19 and y=120
+    let targetNumber = [Math.floor(Math.random() * ((120 - 19) + 1)) + 19];
+    let wins = 0;
+    let losses = 0;
+    let counter = 0;
 
-var crystals = $("#crystals");
+    $("#number-to-guess").text(targetNumber);
+    $('.wins').text(wins);
+    $('.losses').text(losses);
+    $('.userTotal').text(counter);
 
-var counter = 0;
-// needs to randomly pick and assign to the crystals 1-12 no dupes
-var numberOptions = [10, 5, 3, 7];
+    // needs to randomly pick and assign to the crystals 1-12 no dupes
+    let secretNumbers = [];
 
+    for (let i = 0; i < 4; i++) {
+        let crystalNumber = [Math.floor(Math.random() * ((12 + 1) - 1))];
 
-for (var i = 0; i < numberOptions.length; i++) {
-    var imageCrystal = $("<img>");
-
-    imageCrystal.addClass("crystal-image");
-
-    imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
-
-    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-
-    crystals.append(imageCrystal);
-
-}
-
-crystals.on("click", ".crystal-image", function() {
-
-    var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue);
-
-    counter += crystalValue;
-
-    alert("New score: " + counter);
-
-    if (counter === targetNumber) {
-        alert("You Win!");
+        secretNumbers.push(Number(crystalNumber));
     }
+    console.log(secretNumbers);
 
-    else if (counter >= targetNumber) {
-        alert("You Lose!");
+    //pull from array to assign numbers to crystals
+    var red = secretNumbers[0];
+    var amber = secretNumbers[1];
+    var purple = secretNumbers[2];
+    var green = secretNumbers[3];
+
+    // new game not generating new targetNumber or new secretNumbers
+    function newGame() {
+        let = targetNumber = [Math.floor(Math.random() * ((120 - 19) + 1)) + 19];
+        counter = 0;
+        secretNumbers = [];
+        for (let i = 0; i < 4; i++) {
+            let crystalNumber = [Math.floor(Math.random() * ((12 + 1) - 1))];
+            secretNumbers.push(Number(crystalNumber));
+        }
+        var red = secretNumbers[0];
+        var amber = secretNumbers[1];
+        var purple = secretNumbers[2];
+        var green = secretNumbers[3];
     }
+    // User win
+    function userWin() {
+        wins++;
+        $('.wins').text(wins);
+        newGame();
+    }
+    //User loss
+    function userLose() {
+        losses++;
+        $('.losses').text(losses);
+        newGame();
+    }
+    //attaching number to crystals and click directions
+    $('.red').on('click', function () {
+        counter = counter + red;
+        $('.userTotal').text(counter);
+        if (counter == targetNumber) {
+            userWin();
+        } else if (counter >= targetNumber) {
+            userLose();
+        }
+    })
 
+    $('.amber').on('click', function () {
+        counter = counter + amber;
+        $('.userTotal').text(counter);
+
+        if (counter == targetNumber) {
+            userWin();
+        } else if (counter >= targetNumber) {
+            userLose();
+        }
+    })
+
+    $('.purple').on('click', function () {
+        counter = counter + purple;
+        $('.userTotal').text(counter);
+
+        if (counter == targetNumber) {
+            userWin();
+        } else if (counter >= targetNumber) {
+            userLose();
+        }
+    })
+
+    $('.green').on('click', function () {
+        counter = counter + green;
+        $('.userTotal').text(counter);
+        if (counter == targetNumber) {
+            userWin();
+        } else if (counter >= targetNumber) {
+            userLose();
+        }
+    })
 });

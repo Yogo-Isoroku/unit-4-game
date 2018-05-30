@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+   
     
     
     
@@ -16,9 +17,18 @@
 <body>
     <h1>Number to Guess: <span id="number-to-guess"></span></h1>
 
-    <div id="crystals">
+    <div>Your Total: <span class='userTotal'></span></div>
+    <div>Wins: <span class='wins'></span></div>
+    <div>Losses: <span class='losses'></span></div>
 
+    <div class="crystals">
+        <img src='assets/images/crystalRed.png' class='red'>
+        <img src='assets/images/crystalAmber.png' class='amber'>
+        <img src='assets/images/crystalPurple.png' class='purple'>
+        <img src='assets/images/crystalGreen2.png' class='green'>
     </div>
+   
+    
     
 </body>
 </html>
