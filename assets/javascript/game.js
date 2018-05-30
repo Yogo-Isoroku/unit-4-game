@@ -36,6 +36,7 @@ $(document).ready(function () {
             let crystalNumber = [Math.floor(Math.random() * ((12 + 1) - 1))];
             secretNumbers.push(Number(crystalNumber));
         }
+        $("#number-to-guess").text(targetNumber);
         var red = secretNumbers[0];
         var amber = secretNumbers[1];
         var purple = secretNumbers[2];
