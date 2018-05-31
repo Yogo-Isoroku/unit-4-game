@@ -1,4 +1,44 @@
-.crystal-image {
-    width: 350px;
-    height: 500px;
+body {
+    background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+
+.jumbotron { 
+    background: radial-gradient(transparent, rgb(207, 118, 207)),
+    url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);   
+    
+}
+
+.score {
+    font-family: atomic age;
+    font-size: 30px;
+    color: rgb(238, 237, 237);
+    text-align: center;
+}
+
+
+.jumbotron h1 {
+    text-align: center;
+    font-size: 120px;
+    font-family: atomic age;
+    color: white;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: rgb(161, 152, 26);
+    width: 100%;
+}
+
+.jumbotron .score {
+    font-size: 40px;
+}
+
+.btn {
+    flex: 1;
+    background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    opacity: 0.75;
+}
+
+.img {
+    width: auto;
+    max-width: 0 auto;
+    height: auto;
+    max-height: 200px;
 }

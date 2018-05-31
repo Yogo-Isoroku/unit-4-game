@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //needs to randomly choose a target number between x=19 and y=120
-    let targetNumber = [Math.floor(Math.random() * ((120 - 19) + 1)) + 19];
+    let targetNumber = [Math.floor(1 + Math.random() * 101)];
     let wins = 0;
     let losses = 0;
     let counter = 0;
@@ -13,9 +13,9 @@ $(document).ready(function () {
 
     // needs to randomly pick and assign to the crystals 1-12 no dupes
     let secretNumbers = [];
-    var n = 0;
+   n = 0;
     while (n < 4) {
-        let crystalNumber = [Math.floor(Math.random() * ((12 - 1) + 1))];
+        let crystalNumber = [Math.floor(1 + Math.random() * 11)];
         if (!secretNumbers.includes(crystalNumber)) {
             secretNumbers.push(Number(crystalNumber));
             n++;
@@ -32,13 +32,18 @@ $(document).ready(function () {
 
     // new game not generating new targetNumber or new secretNumbers
     function newGame() {
-        let = targetNumber = [Math.floor(Math.random() * ((120 - 19) + 1)) + 19];
+        let = targetNumber = [Math.floor(19 + Math.random() * 101)];
         $("#number-to-guess").text(targetNumber);
         counter = 0;
         secretNumbers = [];
-        for (let i = 0; i < 4; i++) {
-            let crystalNumber = [Math.floor(Math.random() * ((12 - 1) + 1))];
-            secretNumbers.push(Number(crystalNumber));
+        var n = 0;
+        while (n < 4) {
+            let crystalNumber = [Math.floor(1 + Math.random() * 11)];
+            if (!secretNumbers.includes(crystalNumber)) {
+                secretNumbers.push(Number(crystalNumber));
+                n++;
+            }
+    
         }
 
         red = secretNumbers[0];

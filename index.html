@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Atomic+Age|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
-   
-    
-    
-    
-</head>
-<body>
-    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-
-    <div>Your Total: <span class='userTotal'></span></div>
-    <div>Wins: <span class='wins'></span></div>
-    <div>Losses: <span class='losses'></span></div>
-
-    <div class="crystals">
-        <img src='assets/images/crystalRed.png' class='red'>
-        <img src='assets/images/crystalAmber.png' class='amber'>
-        <img src='assets/images/crystalPurple.png' class='purple'>
-        <img src='assets/images/crystalGreen2.png' class='green'>
     </div>
-   
-    
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script> -->
+
+
+
+</head>
+
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div>
+            <h1 class="display-4">CRYSTAL MADNESS!</h1>
+            <div class='score col-sm'>Number to Guess:
+                <span id="number-to-guess"></span>
+            </div>
+        </div>
+    </div>
+    <div class='container'>
+            <div class='row'>
+                <div class='score col-sm'>Your Total:
+                    <span class='userTotal'></span>
+                </div>
+                <div class='score col-sm'>Wins:
+                    <span class='wins'></span>
+                </div>
+                <div class='score col-sm'>Losses:
+                    <span class='losses'></span>
+                </div>
+            </div>
+        </div>
+
+    <div class="container crystals">
+        <div class="row">
+            <div class='col-sm'>
+                <button class='btn'>
+                    <img src='assets/images/crystalRainbow2.png' class='red img'>
+                </button>
+            </div>
+            <div class='col-sm'>
+                <button class='btn'>
+                    <img src='assets/images/crystalBlue2.png' class='amber img'>
+                </button>
+            </div>
+            <div class='col-sm'>
+                <button class='btn'>
+                    <img src='assets/images/crystalPurple1.png' class='purple img'>
+                </button>
+            </div>
+            <div class='col-sm'>
+                <button class='btn'>
+                    <img src='assets/images/crystalGreen3.png' class='green img'>
+                </button>
+            </div>
+        </div>
+    </div>
     
 </body>
+
 </html>
