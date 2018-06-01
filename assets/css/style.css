@@ -1,10 +1,16 @@
+html, body {
+    height: 100%;
+}
 body {
     background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    display: flex;
+    flex-direction: column;
 }
-
+.content {
+    flex: 1 0 auto;
+}
 .jumbotron { 
-    background: radial-gradient(transparent, rgb(207, 118, 207)),
-    url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);   
+    background: radial-gradient(transparent, rgb(207, 118, 207));  
     border-bottom: 1px solid gold;
 }
 
@@ -16,7 +22,11 @@ body {
     
 }
 
+.score-margin {
+    margin-bottom: 200px;
+}
 .score-border {
+
     border: 0.5px solid gold;
     background: radial-gradient(transparent, rgb(223, 172, 223))
 }
@@ -50,11 +60,60 @@ body {
     max-height: 200px;
 }
 
+footer {
+    flex-shrink: 0;
+    clear: both;
+    font-size: 12px;
+    color: #fff;
+    color: #ccc;
+    text-align: center;
+    background: radial-gradient(transparent, rgb(175, 48, 175));
+    opacity: 0.75;
+    border-top: 1px solid gold;
+    height: 60px;
+  }
+
 @media screen and (max-width: 770px) {
+    body {
+        background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    }
+    .jumbotron h1 {
+        font-size: 2.0rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(161, 152, 26);
+    }
+
+    .jumbotron .score {
+        font-size: 1.5rem;
+    }
+
+    .score-border {
+        height: 50px;
+    }
+    .score {
+        font-size: 1.0rem;
+    }
+
+    .btn {
+        margin-left: 25px;
+        margin-bottom: 70px;
+        
+    }
+   
+    
+    .img {
+        max-height: 100px;
+    }
+
+    .score-margin {
+        margin-bottom: 70px;
+    }
+
 
 }
+}
 
-@media screen and (max-width: 641px) {
+@media screen and (max-width: 415px) {
     
     body {
         background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
@@ -69,16 +128,19 @@ body {
         font-size: 1.5rem;
     }
 
+    .score-border {
+        height: 50px;
+    }
     .score {
         font-size: 1.0rem;
     }
 
     .btn {
-        margin-left: 10px;
-        margin-bottom: 40px;
+        margin-left: 25px;
+        margin-bottom: 70px;
         
     }
-    
+   
     
     .img {
         max-height: 100px;
@@ -90,3 +152,89 @@ body {
 
 
 }
+
+@media screen and (max-width: 364px) {
+    
+    body {
+        background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    }
+
+    .jumbostron {
+        height: 20%;
+    }
+    .jumbotron h1 {
+        font-size: 1.5rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(161, 152, 26);
+    }
+
+    .jumbotron .score {
+        font-size: 1rem;
+    }
+
+    .score-border {
+        height: 20%;
+        min-height: 40px;
+    }
+    .score {
+        font-size: 0.75rem;
+        
+    }
+
+    .img {
+        max-height: 80px;
+    }
+
+
+    .footer {
+        position: static;
+    
+    }
+
+
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+    body {
+        background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    }
+
+    .jumbostron {
+        height: 20%;
+    }
+    .jumbotron h1 {
+        font-size: 1.5rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(161, 152, 26);
+    }
+
+    .jumbotron .score {
+        font-size: 1rem;
+    }
+
+    .score-border {
+        height: 20%;
+        min-height: 40px;
+
+    }
+    .score {
+        font-size: 0.75rem;
+        
+    }
+
+    .img {
+        max-height: 80px;
+    }
+
+
+    .footer {
+        position: static;
+  }
