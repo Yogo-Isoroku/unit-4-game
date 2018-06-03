@@ -4,7 +4,8 @@ body {
 }
 
 body {
-    background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat;
+
     display: flex;
     flex-direction: column;
 }
@@ -13,63 +14,73 @@ body {
     flex: 1 0 auto;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .jumbotron {
+    height: 20%;
     background: radial-gradient(transparent, rgb(207, 118, 207));
     border-bottom: 1px solid gold;
 }
 
+.jumbotron h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: atomic age;
+    color: rgb(41, 37, 37);
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(212, 199, 17);
+    width: 100%;
+}
+
+.jumbotron .score {
+    font-size: 1rem;
+}
+
 .score {
     font-family: atomic age;
-    font-size: 30px;
-    color: rgb(238, 237, 237);
+    font-size: 0.75rem;
+    color: rgb(221, 209, 223);
     text-align: center;
 }
 
 .score-margin {
-    margin-bottom: 100px;
+    margin-bottom: 3.5rem;
 }
 
 .score-border {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.5px solid gold;
-    background: radial-gradient(transparent, rgb(223, 172, 223))
+    border: .7px solid gold;
+    background: radial-gradient(transparent, rgb(223, 172, 223));
+    height: 20%;
+    min-height: 40px;
 }
-
-.jumbotron h1 {
-    text-align: center;
-    font-size: 120px;
-    font-family: atomic age;
-    color: white;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: rgb(161, 152, 26);
-    width: 100%;
+.row {
+    justify-content: center;
+    
 }
-
-.jumbotron .score {
-    font-size: 40px;
+.rowbtn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 2rem;
 }
-
 .btn {
     flex: 1;
     background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     opacity: 0.75;
     border: 1px solid gold;
-    
+    max-width: 120px;
+    height: auto;
 }
 
 .img {
     width: auto;
     max-width: 0 auto;
     height: auto;
-    max-height: 200px;
+    max-height: 80px;
 }
 
 footer {
@@ -81,19 +92,15 @@ footer {
     text-align: center;
     background: radial-gradient(transparent, rgb(207, 118, 207));
     opacity: 0.75;
-    border-top: 1px solid gold;
+    border-top: 3px solid gold;
     height: 60px;
 }
 
-@media screen and (max-width: 770px) {
-    body {
-        background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    }
-    .jumbotron h1 {
-        font-size: 2.0rem;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgb(161, 152, 26);
-    }
+
+
+
+@media screen and (min-width: 375px) {
+  
     .jumbotron .score {
         font-size: 1.5rem;
     }
@@ -103,76 +110,85 @@ footer {
     .score {
         font-size: 1.0rem;
     }
+    
+    .rowbtn {
+        margin-bottom: 5rem;
+    }
     .btn {
-        margin-left: 25px;
-        margin-bottom: 70px;
+        max-width: 150px;
     }
     .img {
-        max-height: 100px;
+        max-height: 125px;
     }
     .score-margin {
-        margin-bottom: 70px;
+        margin-bottom: 5rem;
     }
 }
-
-}
-
-@media screen and (max-width: 415px) {
-    body {
-        background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    }
+@media screen and (min-width: 767px) {
+   
     .jumbotron h1 {
-        font-size: 2.0rem;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgb(161, 152, 26);
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+        -webkit-text-stroke-width: .1rem;
     }
     .jumbotron .score {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     .score-border {
         height: 50px;
     }
     .score {
-        font-size: 1.0rem;
+        font-size: 1.5rem;
+    }
+    .rowbtn {
+        margin-bottom: 5rem;
+    }
+    .row {
+        flex-wrap: nowrap;
     }
     .btn {
-        margin-left: 25px;
-        margin-bottom: 70px;
+        max-width: 150px;
     }
     .img {
-        max-height: 100px;
+        max-height: 125px;
     }
     .score-margin {
-        margin-bottom: 70px;
+        margin-bottom: 12rem;
     }
 }
 
-@media screen and (max-width: 364px) {
-    body {
-        background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    }
-    .jumbostron {
-        height: 20%;
-    }
+@media screen and (min-width: 1350px) {
+   
     .jumbotron h1 {
-        font-size: 1.5rem;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgb(161, 152, 26);
+        font-size: 6.5rem;
+        margin-bottom: 2.5rem;
+        -webkit-text-stroke-width: .2rem;
     }
     .jumbotron .score {
-        font-size: 1rem;
+        font-size: 3rem;
     }
     .score-border {
-        height: 20%;
-        min-height: 40px;
+        height: 50px;
     }
     .score {
-        font-size: 0.75rem;
+        font-size: 2.0rem;
+    }
+    .rowbtn {
+        margin-bottom: 5rem;
+    }
+    .row {
+        flex-wrap: nowrap;
+    }
+    .btn {
+        max-width: 300px;
+        margin: 2rem;
     }
     .img {
-        max-height: 80px;
+        max-height: 200px;
     }
-    .footer {
-        position: static;
+    .score-margin {
+        margin-bottom: 6rem;
     }
+    
 }
+
