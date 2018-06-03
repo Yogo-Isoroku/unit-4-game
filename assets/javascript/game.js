@@ -13,12 +13,12 @@ $(document).ready(function () {
 
     // needs to randomly pick and assign to the crystals 1-12 no dupes
     let secretNumbers = [];
-   n = 0;
-    while (n < 4) {
+ 
+    while (secretNumbers.length < 4) {
         let crystalNumber = [Math.floor(1 + Math.random() * 11)];
         if (!secretNumbers.includes(crystalNumber)) {
             secretNumbers.push(Number(crystalNumber));
-            n++;
+          
         }
 
     }
@@ -36,12 +36,12 @@ $(document).ready(function () {
         $("#number-to-guess").text(targetNumber);
         counter = 0;
         secretNumbers = [];
-        var n = 0;
-        while (n < 4) {
+     
+        while (secretNumbers.length < 4) {
             let crystalNumber = [Math.floor(1 + Math.random() * 11)];
             if (!secretNumbers.includes(crystalNumber)) {
                 secretNumbers.push(Number(crystalNumber));
-                n++;
+            
             }
     
         }
