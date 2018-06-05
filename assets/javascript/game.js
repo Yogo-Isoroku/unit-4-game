@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //needs to randomly choose a target number between x=19 and y=120
-    let targetNumber = [Math.floor(1 + Math.random() * 101)];
+    let targetNumber = [Math.floor(19 + Math.random() * 101)];
     let wins = 0;
     let losses = 0;
     let counter = 0;
@@ -15,14 +15,12 @@ $(document).ready(function () {
     let secretNumbers = [];
  
     while (secretNumbers.length < 4) {
-        let crystalNumber = [Math.floor(1 + Math.random() * 11)];
+        let crystalNumber = Math.floor(1 + Math.random() * 11);
         if (!secretNumbers.includes(crystalNumber)) {
             secretNumbers.push(Number(crystalNumber));
           
         }
-
     }
-
 
     //pull from array to assign numbers to crystals
     var red = secretNumbers[0];
@@ -38,7 +36,7 @@ $(document).ready(function () {
         secretNumbers = [];
      
         while (secretNumbers.length < 4) {
-            let crystalNumber = [Math.floor(1 + Math.random() * 11)];
+            let crystalNumber = Math.floor(1 + Math.random() * 11);
             if (!secretNumbers.includes(crystalNumber)) {
                 secretNumbers.push(Number(crystalNumber));
             
