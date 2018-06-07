@@ -19,16 +19,13 @@ body {
     position:relative; 
     left:-50%;
     border-radius: 50px;
-    -webkit-animation-name: instructionPulse;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
     background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     opacity: 0.75;
     border: 5px solid gold;
     color: rgb(221, 209, 223);
   }
   .instructions {
-    width: 50rem;
+    width: 20rem;
   }
 .content {
     flex: 1 0 auto;
@@ -147,9 +144,16 @@ body {
 @media screen and (min-width: 319px) {
     .score-margin { margin-bottom: 1rem;
     }
+    
+    .popup {
+        top: 40%;
+    }
 }
 @media screen and (min-width: 375px) {
-
+   
+    .popup {
+        top: 40%;
+    }
     .jumbotron .score {
         font-size: 1.5rem;
        
@@ -176,7 +180,12 @@ body {
 }
 
 @media screen and (min-width: 767px) {
-   
+    .instructions {
+        width: 45rem;
+    }
+    .popup {
+        top: 40%;
+    }
     .jumbotron {
         height: 200px;
     }
@@ -211,6 +220,12 @@ body {
 }
 
 @media screen and (min-width: 1020px) {
+    .instructions {
+        width: 50rem;
+    }
+    .popup {
+        top: 40%;
+    }
    .jumbotron {
        height: 300px;
    }
