@@ -7,10 +7,29 @@ body {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    
-    
 }
 
+.popup{
+    position:fixed;
+    left:50%;
+    top: 55%;
+    z-index: 1;
+  }
+  .popup .wrapper{
+    position:relative; 
+    left:-50%;
+    border-radius: 50px;
+    -webkit-animation-name: instructionPulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    opacity: 0.75;
+    border: 5px solid gold;
+    color: rgb(221, 209, 223);
+  }
+  .instructions {
+    width: 50rem;
+  }
 .content {
     flex: 1 0 auto;
     align-items: center;
