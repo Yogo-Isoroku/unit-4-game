@@ -16,7 +16,7 @@ $(document).ready(function () {
     let wins = 0;
     let losses = 0;
     let counter = 0;
-    let bgMusic = new Audio('./assets/audio/371516__mrthenoronha__space-game-theme-loop.wav')
+    let bgMusic = new Audio('./assets/audio/371516__mrthenoronha__space-game-theme-loop.ogg')
 
     bgMusic.addEventListener('ended', function () {
         this.currentTime = 0;
