@@ -2,76 +2,107 @@ html {
     position: relative;
     min-height: 100vh;
 }
+
 body {
     background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
 }
-
-.popup{
-    position:fixed;
-    left:50%;
+/* ----- how to play popup ----*/
+.popup {
+    position: fixed;
+    left: 50%;
     top: 55%;
     z-index: 1;
-  }
-  .popup .wrapper{
-    position:relative; 
-    left:-50%;
-    border-radius: 50px;
+}
+.wrapper h1, h2 {
+    font-family: atomic age, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+
+}
+
+.popup .wrapper {
+    position: relative;
+    left: -50%;
+    border-radius: 10px;
     background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     opacity: 0.75;
     border: 5px solid gold;
     color: rgb(221, 209, 223);
-  }
-  .instructions {
+}
+/* popup pulsing border animation */
+.wrapper:before,
+.wrapper:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgb(250, 248, 215), /* inner white */
+    inset 0px 0 4px #f0f, /* inner left magenta short */
+    inset 0px 0 4px #0ff, /* inner right cyan short */
+    inset 0px 0 30px #f0f, /* inner left magenta broad */
+    inset 0px 0 30px #0ff, /* inner right cyan broad */
+    0 0 50px rgb(250, 248, 215), /* outer white */
+    -10px 0 80px #f0f, /* outer left magenta */
+    10px 0 80px #0ff;
+    left: -2px;
+    right: -2px;
+    top: -2px;
+    bottom: -2px;
+    animation: animate 2.4s linear infinite;
+}
+
+.instructions {
     width: 20rem;
-  }
+}
+
 .content {
     flex: 1 0 auto;
     align-items: center;
 }
+/* ---- nav-bar ---- */
 #masthead {
     position: static;
     z-index: 99;
     width: 100%;
     overflow: auto;
-    color:rgb(41, 37, 37);
-    background-color:rgb(175, 114, 175);
+    color: rgb(41, 37, 37);
+    background-color: rgb(175, 114, 175);
+}
 
-  }
-  #navbarNav {
+#navbarNav {
     justify-content: flex-end;
-  }
-  .navbar-light .navbar-nav .nav-link {
+}
+
+.navbar-light .navbar-nav .nav-link {
     color: gold;
-  }
-  .navbar {
+}
+
+.navbar {
     padding: 0px;
-  }
-  
-  nav a {
+}
+
+nav a {
     display: inline-block;
     margin-left: 15px;
     line-height: 18px;
-  
     text-decoration: none;
-  }
-  #logo {
+}
+
+#logo {
     float: left;
-  
     height: 50px;
-    font-family: atomic age;
+    font-family: atomic age, Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 40px;
- 
     text-align: center;
     -webkit-text-stroke-width: .1px;
     -webkit-text-stroke-color: rgb(212, 199, 17);
-    
     margin-left: 0px;
-  }
+}
+/* ----page title ---- */
 .jumbotron {
     padding-top: 1rem;
     height: 90px;
@@ -83,7 +114,7 @@ body {
 .jumbotron h1 {
     font-size: 1.7rem;
     text-align: center;
-    font-family: atomic age;
+    font-family: atomic age, Arial, Helvetica, sans-serif;
     color: rgb(41, 37, 37);
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: rgb(212, 199, 17);
@@ -114,26 +145,38 @@ body {
     height: 20%;
     min-height: 40px;
 }
+/* ---- crystals ---- */
 .row {
     justify-content: center;
-    
 }
+
 .rowbtn {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     margin-bottom: 2rem;
 }
+
 .btn {
     flex: 1;
     background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     opacity: 0.75;
     border: 1px solid gold;
+    box-shadow: inset 0 0 5px rgb(252, 251, 236), /* inner white */
+    inset 0px 0 4px rgb(233, 33, 233), /* inner left magenta short */
+    inset 0px 0 4px rgb(0, 255, 200), /* inner right cyan short */
+    inset 0px 0 20px rgb(233, 33, 233), /* inner left magenta broad */
+    inset 0px 0 20px rgb(0, 255, 200), /* inner right cyan broad */
+    0 0 5px rgb(250, 249, 238), /* outer white */
+    -4px 0 20px rgb(233, 33, 233), /* outer left magenta */
+    4px 0 20px rgb(0, 255, 200);
     max-width: 120px;
     height: auto;
     color: rgb(221, 209, 223);
+   
 }
+
 
 .img {
     width: auto;
@@ -141,22 +184,37 @@ body {
     height: auto;
     max-height: 80px;
 }
-@media screen and (min-width: 319px) {
-    .score-margin { margin-bottom: 1rem;
+
+@-webkit-keyframes animate {
+    0% {
+        transform: scale(1);
+        opacity: 0;
     }
-    
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* media queries for larger pages */
+@media screen and (min-width: 319px) {
+    .score-margin {
+        margin-bottom: 1rem;
+    }
     .popup {
         top: 40%;
     }
 }
+
 @media screen and (min-width: 375px) {
-   
     .popup {
         top: 40%;
     }
     .jumbotron .score {
         font-size: 1.5rem;
-       
     }
     .score-border {
         height: 50px;
@@ -164,7 +222,6 @@ body {
     .score {
         font-size: 1.0rem;
     }
-    
     .rowbtn {
         margin-bottom: 5rem;
     }
@@ -215,8 +272,6 @@ body {
     .img {
         max-height: 125px;
     }
-
-   
 }
 
 @media screen and (min-width: 1020px) {
@@ -226,9 +281,9 @@ body {
     .popup {
         top: 40%;
     }
-   .jumbotron {
-       height: 300px;
-   }
+    .jumbotron {
+        height: 300px;
+    }
     .jumbotron h1 {
         font-size: 5.5rem;
         margin-bottom: -.5rem;
@@ -259,6 +314,4 @@ body {
     .score-margin {
         margin-bottom: 4rem;
     }
-    
 }
-
