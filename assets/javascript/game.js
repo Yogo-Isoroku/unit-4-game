@@ -5,7 +5,8 @@ $(document).ready(function () {
          bgMusic.addEventListener('ended', function () {
              this.currentTime = 0;
              this.play();
-         }, false);
+         }, 
+         false);
          bgMusic.play();
          $('.btn').show();
          $('#instructions').hide();
