@@ -12,12 +12,12 @@ User is given a random target number (between 19-120) to meet not exceed. The fo
 * Attempt to meet the target number without exceeding. 
 
 ## Built With
-* [html]
-* [css]
+* [HTML]
+* [CSS]
 * [Bootstrap](https://getbootstrap.com/) - Bootstrap
 * [jQuery](http://jquery.com/) - jQuery
 
 ## Authors
 * **Adam Funk** 
 * [Github](https://github.com/funkaj)
-* [LinkedIn](https://www.linkedin.com/feed/)
+* [LinkedIn](https://www.linkedin.com/in/adam-funk-5831b8152/)
