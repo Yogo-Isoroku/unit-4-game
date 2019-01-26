@@ -10,7 +10,6 @@ body {
     flex-direction: column;
 }
 
-
 /* ----- how to play popup ----*/
 .popup {
     position: fixed;
@@ -18,6 +17,7 @@ body {
     top: 55%;
     z-index: 1;
 }
+
 .wrapper h1, h2 {
     font-family: atomic age, Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
@@ -33,6 +33,7 @@ body {
     border: 5px solid gold;
     color: rgb(221, 209, 223);
 }
+
 /* popup pulsing border animation */
 .wrapper:before,
 .wrapper:after {
