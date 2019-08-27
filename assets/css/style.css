@@ -1,321 +1,327 @@
 html {
-    position: relative;
-    min-height: 100vh;
+	position: relative;
+	min-height: 100vh;
 }
 
 body {
-    background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
+	background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+		no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
 }
 
 /* ----- how to play popup ----*/
 .popup {
-    position: fixed;
-    left: 50%;
-    top: 55%;
-    z-index: 1;
-}
-
-.wrapper h1, h2 {
-    font-family: atomic age, Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
-
+	position: fixed;
+	left: 50%;
+	top: 55%;
+	z-index: 1;
 }
 
 .popup .wrapper {
-    position: relative;
-    left: -50%;
-    border-radius: 10px;
-    background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    opacity: 0.75;
-    border: 5px solid gold;
-    color: rgb(221, 209, 223);
+	position: relative;
+	left: -50%;
+	border-radius: 10px;
+	background: radial-gradient(transparent, rgb(175, 48, 175)),
+		url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	opacity: 0.75;
+	border: 5px solid gold;
+	color: rgb(221, 209, 223);
+}
+
+.wrapper h1,
+h2 {
+	font-family: atomic age, Arial, Helvetica, sans-serif;
+	font-size: 1.6rem;
 }
 
 /* popup pulsing border animation */
-.wrapper:before,
-.wrapper:after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px rgb(250, 248, 215), /* inner white */
-    inset 0px 0 4px #f0f, /* inner left magenta short */
-    inset 0px 0 4px #0ff, /* inner right cyan short */
-    inset 0px 0 30px #f0f, /* inner left magenta broad */
-    inset 0px 0 30px #0ff, /* inner right cyan broad */
-    0 0 50px rgb(250, 248, 215), /* outer white */
-    -10px 0 80px #f0f, /* outer left magenta */
-    10px 0 80px #0ff;
-    left: -2px;
-    right: -2px;
-    top: -2px;
-    bottom: -2px;
-    animation: animate 2.4s linear infinite;
-}
 
 .instructions {
-    width: 20rem;
+	width: 20rem;
 }
 
 .content {
-    flex: 1 0 auto;
-    align-items: center;
+	flex: 1 0 auto;
+	align-items: center;
+}
+
+.wrapper:before,
+.wrapper:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border-radius: 10px;
+	box-shadow: inset 0 0 5px rgb(250, 248, 215),
+		/* inner white */ inset 0px 0 4px #f0f,
+		/* inner left magenta short */ inset 0px 0 4px #0ff,
+		/* inner right cyan short */ inset 0px 0 30px #f0f,
+		/* inner left magenta broad */ inset 0px 0 30px #0ff,
+		/* inner right cyan broad */ 0 0 50px rgb(250, 248, 215),
+		/* outer white */ -10px 0 80px #f0f,
+		/* outer left magenta */ 10px 0 80px #0ff;
+	left: -2px;
+	right: -2px;
+	top: -2px;
+	bottom: -2px;
+	animation: animate 2.4s linear infinite;
 }
 /* ---- nav-bar ---- */
+#logo {
+	float: left;
+	height: 50px;
+	font-family: atomic age, Arial, Helvetica, sans-serif;
+	font-size: 1.7rem;
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
+	-webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: rgb(212, 199, 17);
+	margin-left: 0px;
+}
+
 #masthead {
-    position: static;
-    z-index: 99;
-    width: 100%;
-    overflow: auto;
-    color: rgb(41, 37, 37);
-    -webkit-text-stroke-width: .1px;
-    -webkit-text-stroke-color: rgb(212, 199, 17);
-    background-color: rgb(175, 114, 175);
+	position: static;
+	z-index: 99;
+	width: 100%;
+	overflow: auto;
+	color: rgb(41, 37, 37);
+	-webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: rgb(212, 199, 17);
+	background-color: rgb(175, 114, 175);
 }
 
 #navbarNav {
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: gold;
+	color: gold;
 }
 
 .navbar {
-    padding: 0px;
+	padding: 0px;
 }
 
 nav a {
-    display: inline-block;
-    margin-left: 15px;
-    line-height: 18px;
-    text-decoration: none;
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 18px;
+	text-decoration: none;
 }
 
-#logo {
-    float: left;
-    height: 50px;
-    font-family: atomic age, Arial, Helvetica, sans-serif;
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: 40px;
-    text-align: center;
-    -webkit-text-stroke-width: .1px;
-    -webkit-text-stroke-color: rgb(212, 199, 17);
-    margin-left: 0px;
-}
 /* ----page title ---- */
 .jumbotron {
-    padding-top: 1rem;
-    height: 90px;
-    background: radial-gradient(transparent, rgb(207, 118, 207));
-    border-bottom: 1px solid gold;
-    margin-bottom: 0vh;
+	padding-top: 1rem;
+	height: 90px;
+	background: radial-gradient(transparent, rgb(207, 118, 207));
+	border-bottom: 1px solid gold;
+	margin-bottom: 0vh;
 }
 
 .jumbotron h1 {
-    font-size: 1.7rem;
-    text-align: center;
-    font-family: atomic age, Arial, Helvetica, sans-serif;
-    color: rgb(41, 37, 37);
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: rgb(212, 199, 17);
-    width: 100%;
+	font-size: 1.7rem;
+	text-align: center;
+	font-family: atomic age, Arial, Helvetica, sans-serif;
+	color: rgb(41, 37, 37);
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: rgb(212, 199, 17);
+	width: 100%;
 }
 
 .jumbotron .score {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 .score {
-    font-family: atomic age;
-    font-size: 0.75rem;
-    color: rgb(221, 209, 223);
-    text-align: center;
-}
-
-.score-margin {
-    margin-bottom: 5rem;
+	font-family: atomic age;
+	font-size: 0.75rem;
+	color: rgb(221, 209, 223);
+	text-align: center;
 }
 
 .score-border {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: .7px solid gold;
-    background: radial-gradient(transparent, rgb(223, 172, 223));
-    height: 20%;
-    min-height: 40px;
-}
-/* ---- crystals ---- */
-.row {
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.7px solid gold;
+	background: radial-gradient(transparent, rgb(223, 172, 223));
+	height: 20%;
+	min-height: 40px;
 }
 
-.rowbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin-bottom: 2rem;
+.score-margin {
+	margin-bottom: 5rem;
 }
+
+/* ---- crystals ---- */
 
 .btn {
-    flex: 1;
-    background: radial-gradient(transparent, rgb(175, 48, 175)), url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    opacity: 0.75;
-    border: 1px solid gold;
-    box-shadow: inset 0 0 5px rgb(252, 251, 236), /* inner white */
-    inset 0px 0 4px rgb(233, 33, 233), /* inner left magenta short */
-    inset 0px 0 4px rgb(0, 255, 200), /* inner right cyan short */
-    inset 0px 0 20px rgb(233, 33, 233), /* inner left magenta broad */
-    inset 0px 0 20px rgb(0, 255, 200), /* inner right cyan broad */
-    0 0 5px rgb(250, 249, 238), /* outer white */
-    -4px 0 20px rgb(233, 33, 233), /* outer left magenta */
-    4px 0 20px rgb(0, 255, 200);
-    max-width: 120px;
-    height: auto;
-    color: rgb(221, 209, 223);
-   
+	flex: 1;
+	background: radial-gradient(transparent, rgb(175, 48, 175)),
+		url(https://images.pexels.com/photos/2162/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	opacity: 0.75;
+	border: 1px solid gold;
+	box-shadow: inset 0 0 5px rgb(252, 251, 236),
+		/* inner white */ inset 0px 0 4px rgb(233, 33, 233),
+		/* inner left magenta short */ inset 0px 0 4px rgb(0, 255, 200),
+		/* inner right cyan short */ inset 0px 0 20px rgb(233, 33, 233),
+		/* inner left magenta broad */ inset 0px 0 20px rgb(0, 255, 200),
+		/* inner right cyan broad */ 0 0 5px rgb(250, 249, 238),
+		/* outer white */ -4px 0 20px rgb(233, 33, 233),
+		/* outer left magenta */ 4px 0 20px rgb(0, 255, 200);
+	max-width: 120px;
+	height: auto;
+	color: rgb(221, 209, 223);
 }
 
 .img {
-    width: auto;
-    max-width: 0 auto;
-    height: auto;
-    max-height: 80px;
+	width: auto;
+	max-width: 0 auto;
+	height: auto;
+	max-height: 80px;
+}
+
+.row {
+	justify-content: center;
+}
+
+.rowbtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin-bottom: 2rem;
 }
 
 @-webkit-keyframes animate {
-    0% {
-        transform: scale(1);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+	0% {
+		transform: scale(1);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
 }
 
 /* media queries for larger pages */
 @media screen and (min-width: 319px) {
-    .score-margin {
-        margin-bottom: 1rem;
-    }
-    .popup {
-        top: 40%;
-    }
+	.score-margin {
+		margin-bottom: 1rem;
+	}
+	.popup {
+		top: 40%;
+	}
 }
 
 @media screen and (min-width: 375px) {
-    .popup {
-        top: 40%;
-    }
-    .jumbotron .score {
-        font-size: 1.5rem;
-    }
-    .score-border {
-        height: 50px;
-    }
-    .score {
-        font-size: 1.0rem;
-    }
-    .rowbtn {
-        margin-bottom: 5rem;
-    }
-    .btn {
-        max-width: 150px;
-    }
-    .img {
-        max-height: 125px;
-    }
-    .score-margin {
-        margin-bottom: 2.5rem;
-    }
+	.popup {
+		top: 40%;
+	}
+	.jumbotron .score {
+		font-size: 1.5rem;
+	}
+	.score-border {
+		height: 50px;
+	}
+	.score {
+		font-size: 1rem;
+	}
+	.rowbtn {
+		margin-bottom: 5rem;
+	}
+	.btn {
+		max-width: 150px;
+	}
+	.img {
+		max-height: 125px;
+	}
+	.score-margin {
+		margin-bottom: 2.5rem;
+	}
 }
 
 @media screen and (min-width: 767px) {
-    .instructions {
-        width: 45rem;
-    }
-    .popup {
-        top: 40%;
-    }
-    .jumbotron {
-        height: 200px;
-    }
-    .jumbotron h1 {
-        font-size: 3.5rem;
-        margin-bottom: 0px;
-        -webkit-text-stroke-width: .1rem;
-    }
-    .jumbotron .score {
-        font-size: 2.5rem;
-    }
-    .score-border {
-        height: 50px;
-    }
-    .score {
-        font-size: 1.5rem;
-    }
-    .rowbtn {
-        margin-bottom: 5rem;
-    }
-    .row {
-        flex-wrap: nowrap;
-    }
-    .btn {
-        max-width: 150px;
-    }
-    .img {
-        max-height: 125px;
-    }
+	.instructions {
+		width: 45rem;
+	}
+	.popup {
+		top: 40%;
+	}
+	.jumbotron {
+		height: 200px;
+	}
+	.jumbotron h1 {
+		font-size: 3.5rem;
+		margin-bottom: 0px;
+		-webkit-text-stroke-width: 0.1rem;
+	}
+	.jumbotron .score {
+		font-size: 2.5rem;
+	}
+	.score-border {
+		height: 50px;
+	}
+	.score {
+		font-size: 1.5rem;
+	}
+	.rowbtn {
+		margin-bottom: 5rem;
+	}
+	.row {
+		flex-wrap: nowrap;
+	}
+	.btn {
+		max-width: 150px;
+	}
+	.img {
+		max-height: 125px;
+	}
 }
 
 @media screen and (min-width: 1020px) {
-    .instructions {
-        width: 50rem;
-    }
-    .popup {
-        top: 40%;
-    }
-    .jumbotron {
-        height: 300px;
-    }
-    .jumbotron h1 {
-        font-size: 5.5rem;
-        margin-bottom: -.5rem;
-        -webkit-text-stroke-width: .2rem;
-    }
-    .jumbotron .score {
-        font-size: 3rem;
-    }
-    .score-border {
-        height: 50px;
-    }
-    .score {
-        font-size: 2.0rem;
-    }
-    .rowbtn {
-        margin-bottom: 5rem;
-    }
-    .row {
-        flex-wrap: nowrap;
-    }
-    .btn {
-        max-width: 300px;
-        margin: 2rem;
-    }
-    .img {
-        max-height: 200px;
-    }
-    .score-margin {
-        margin-bottom: 4rem;
-    }
+	.instructions {
+		width: 50rem;
+	}
+	.popup {
+		top: 40%;
+	}
+	.jumbotron {
+		height: 300px;
+	}
+	.jumbotron h1 {
+		font-size: 5.5rem;
+		margin-bottom: -0.5rem;
+		-webkit-text-stroke-width: 0.2rem;
+	}
+	.jumbotron .score {
+		font-size: 3rem;
+	}
+	.score-border {
+		height: 50px;
+	}
+	.score {
+		font-size: 2rem;
+	}
+	.rowbtn {
+		margin-bottom: 5rem;
+	}
+	.row {
+		flex-wrap: nowrap;
+	}
+	.btn {
+		max-width: 300px;
+		margin: 2rem;
+	}
+	.img {
+		max-height: 200px;
+	}
+	.score-margin {
+		margin-bottom: 4rem;
+	}
 }
